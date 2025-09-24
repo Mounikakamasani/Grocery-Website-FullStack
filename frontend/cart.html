@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h2>Your Shopping Cart</h2>
+            <div id="cartItems"></div>
+            <p>Total: $<span id="cartTotal">0.00</span></p>
+            <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+            <button class="order-btn" onclick="showAddressForm()">Place Order</button>
+        </section>
+
+        <section class="address-form-container" id="addressFormContainer" style="display: none;">
+            <h3>Enter Delivery Address</h3>
+            <form id="addressForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="zipcode">Zip Code:</label>
+                <input type="text" id="zipcode" name="zipcode" required>
+
+                <button type="submit">Confirm Order</button>
+                <button type="button" onclick="hideAddressForm()">Cancel</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Grocery Store. All Rights Reserved.</p>
+    </footer>
+
+    <script src="cartscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shopping</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                
+                <li><a href="cart.html">Cart</a></li> 
+            </ul>
+            <input type="text" id="searchInput" placeholder="Search for products..." onkeyup="searchProducts()">
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Fresh Grocery Store</h1>
+            <p>Fresh and quality products delivered to your door!</p>
+            <button>Start Shopping</button>
+        </section>
+        
+        <section class="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://i.ndtvimg.com/i/2016-02/apples_625x350_41456318703.jpg" alt="Apple">
+                    <h3>Fresh Apples</h3>
+                    <p>Price: $2.00 per kg</p>
+                    <button onclick="addToCart('Fresh Apples', 2, 'https://i.ndtvimg.com/i/2016-02/apples_625x350_41456318703.jpg')">Add to Cart</button>
+                </div>
+
+
+                <div class="product">
+                    <img src="https://goodineverygrain.ca/wp-content/uploads/2021/06/At-the-grocery-story...-1024x684.jpg" alt="Bread">
+                    <h3>Whole Wheat Bread</h3>
+                    <p>Price: $1.50 per loaf</p>
+                    <button onclick="addToCart('Whole Wheat Bread', 1.5,'https://goodineverygrain.ca/wp-content/uploads/2021/06/At-the-grocery-story...-1024x684.jpg')">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://www.health.com/thmb/YkO47Byp_KvgroUn_KGTux0ay9o=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1414600155-0f072a4998144f07ae07382a225ff7a5.jpg" alt="Milk">
+                    <h3>Fresh Milk</h3>
+                    <p>Price: $1.00 per litre</p>
+                    <button onclick="addToCart('Fresh Milk', 1,'https://www.health.com/thmb/YkO47Byp_KvgroUn_KGTux0ay9o=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1414600155-0f072a4998144f07ae07382a225ff7a5.jpg')">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.R9P6Kt0t9XNRy3uoipYzawHaHa&pid=Api&P=0&h=180" alt="Eggs">
+                    <h3>Organic Eggs</h3>
+                    <p>Price: $3.00 per dozen</p>
+                    <button onclick="addToCart('Organic Eggs', 3,'https://tse2.mm.bing.net/th?id=OIP.R9P6Kt0t9XNRy3uoipYzawHaHa&pid=Api&P=0&h=180')">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://www.tastingtable.com/img/gallery/the-most-common-type-of-banana-youll-find-at-the-grocery-store/intro-1666038855.webp" alt="Bananas">
+                    <h3>Bananas</h3>
+                    <p>Price: $1.50 per kg</p>
+                    <button onclick="addToCart('Bananas', 1.50,'https://www.tastingtable.com/img/gallery/the-most-common-type-of-banana-youll-find-at-the-grocery-store/intro-1666038855.webp')">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://www.foodrepublic.com/img/gallery/why-youre-more-likely-to-find-california-oranges-in-florida-grocery-stores/intro-1706786902.webp" alt="Oranges">
+                    <h3>Fresh Oranges</h3>
+                    <p>Price: $2.20 per kg</p>
+                    <button onclick="addToCart('Fresh Oranges', 2.20,'https://www.foodrepublic.com/img/gallery/why-youre-more-likely-to-find-california-oranges-in-florida-grocery-stores/intro-1706786902.webp')">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://images-prod.healthline.com/hlcmsresource/images/AN_images/how-to-store-potatoes-1296x728-feature.jpg" alt="Potatoes">
+                    <h3>Potatoes</h3>
+                    <p>Price: $0.90 per kg</p>
+                    <button onclick="addToCart('Potatoes', 0.90,'https://images-prod.healthline.com/hlcmsresource/images/AN_images/how-to-store-potatoes-1296x728-feature.jpg')">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://cdn.perishablenews.com/2021/01/p5-3.jpg" alt="Tomatoes">
+                    <h3>Tomatoes</h3>
+                    <p>Price: $1.20 per kg</p>
+                    <button onclick="addToCart('Tomatoes', 1.20,'https://cdn.perishablenews.com/2021/01/p5-3.jpg')">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://static1.bigstockphoto.com/1/0/3/large2/301637473.jpg" alt="Broccoli">
+                    <h3>Broccoli</h3>
+                    <p>Price: $2.50 per bunch</p>
+                    <button onclick="addToCart('Broccoli', 2.50,'https://static1.bigstockphoto.com/1/0/3/large2/301637473.jpg')">Add to Cart</button>
+                </div>
+                
+                <div class="product">
+                    <img src="https://mdafnb.com/wp-content/uploads/2020/07/basmatirice.jpg" alt="Rice">
+                    <h3>Basmati Rice</h3>
+                    <p>Price: $1.80 per kg</p>
+                    <button onclick="addToCart('Basmati Rice', 1.80,'https://mdafnb.com/wp-content/uploads/2020/07/basmatirice.jpg')">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://static.freshtohome.com/cdn-cgi/image/width=600/https://static.freshtohome.com/media/catalog/product/c/h/chicken-3.jpg" alt="Chicken">
+                    <h3>Fresh Chicken</h3>
+                    <p>Price: $4.50 per kg</p>
+                    <button onclick="addToCart('Fresh Chicken', 4.50,'https://static.freshtohome.com/cdn-cgi/image/width=600/https://static.freshtohome.com/media/catalog/product/c/h/chicken-3.jpg')"Add to Cart</button>
+                </button></div>
+                <div class="product">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.VYe0CjE7YuDrq14yUnn8RgHaE8&pid=Api&P=0&h=180" alt="Fish">
+                    <h3>Salmon Fillets</h3>
+                    <p>Price: $12.00 per kg</p>
+                    <button onclick="addToCart('Salmon Fillets', 12,'https://tse1.mm.bing.net/th?id=OIP.VYe0CjE7YuDrq14yUnn8RgHaE8&pid=Api&P=0&h=180')">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://cdn.britannica.com/55/157155-050-D07F5610/Containers-olive-oil.jpg" alt="Olive Oil">
+                    <h3>Extra Virgin Olive Oil</h3>
+                    <p>Price: $7.00 per litre</p>
+                    <button onclick="addToCart('Extra Virgin Olive Oil', 7)">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://thumbs.dreamstime.com/b/raw-macaroni-uncooked-delicious-pasta-penne-noodles-bowl-wooden-background-top-view-186942699.jpg" alt="Pasta">
+                    <h3>Spaghetti Pasta</h3>
+                    <p>Price: $1.30 per pack</p>
+                    <button onclick="addToCart('Spaghetti Pasta', 1.30,'https://thumbs.dreamstime.com/b/raw-macaroni-uncooked-delicious-pasta-penne-noodles-bowl-wooden-background-top-view-186942699.jpg')">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://img.freepik.com/premium-photo/cheddar-cheese-kashkaval-cheese-isolated-white-background-cheese-slices-serving-board_659681-2825.jpg" alt="Cheese">
+                    <h3>Cheddar Cheese</h3>
+                    <p>Price: $4.00 per block</p>
+                    <button onclick="addToCart('Cheddar Cheese', 4,'https://img.freepik.com/premium-photo/cheddar-cheese-kashkaval-cheese-isolated-white-background-cheese-slices-serving-board_659681-2825.jpg')">Add to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.QYU0bp3LIw3O8pqEIGiOEwHaEy&pid=Api&P=0&h=180" alt="Cucumber">
+                    <h3>Fresh Cucumbers</h3>
+                    <p>Price: $1.00 per piece</p>
+                    <button onclick="addToCart('Fresh Cucumbers', 1,'https://tse4.mm.bing.net/th?id=OIP.QYU0bp3LIw3O8pqEIGiOEwHaEy&pid=Api&P=0&h=180')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Grocery Store. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function addToCart(productName, price) {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const item = cartItems.find(item => item.name === productName);
+
+            if (item) {
+                item.quantity += 1;
+            } else {
+                cartItems.push({ name: productName, price: price, quantity: 1 });
+            }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            alert(productName + ' has been added to your cart.');
+        }
+
+        function searchProducts() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const products = document.getElementsByClassName('product');
+
+            Array.from(products).forEach(product => {
+                const productName = product.querySelector('h3').textContent.toLowerCase();
+                if (productName.includes(searchInput)) {
+                    product.style.display = '';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    
+    function addToCart(productName, price, image) {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const item = cartItems.find(item => item.name === productName);
+
+        if (item) {
+            item.quantity += 1;
+        } else {
+            cartItems.push({ name: productName, price: price, quantity: 1, image: image });
+        }
+
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert(productName + ' has been added to your cart.');
+    }
+
+
+    </script>
+
+</body>
+</html>
